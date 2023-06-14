@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html style="">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Dryice | iAutomate</title>
+    <link rel="icon" href="assets/images/iautomate.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="main-dashboard body-flex" style="">
+    <div class="all-wrapper">
+        <div class="top-bar-main d-flex justify-content-between"
+            style="padding: 0 40px ;background:#0077b5;color: #fff;">
+            <img src="assets/images/DRYiCE iAutomate-white.png" style="padding: 6px 0; object-fit: contain; width: auto;" width="140" height="45">
+            <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+                <img src="assets/images/top-bar-cta.PNG">
+            </div>
+        </div>
+        <div class="menu-bar" style="background-color:#dcdddd;padding: 0px 40px;color: #0070ab;">
+            <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Enviroment</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Run Books</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Knowledge</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Analysis</p>
+                </li>
+                <li class="me-2 third-step">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Tickets</p>
+                    <div class="sub-menu" id="third-step">
+                        <a href="1.html" class="m-0 d-block option-main">Auto Execution View</a>
+                        <a class="m-0 d-block" disabled>Actionable Tickets New</a>
+                    </div>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Ticket Logs</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Dashboard</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Help</p>
+                </li>
+            </ul>
+        </div>
+        <div class="container-type" style="padding: 0 25px;">
+            <div class="auto-execution">
+                <h4>Auto Execution View</h4>
+                <div class="input-wrapper">
+                    <div class="form-group">
+                        <p class="label">Organization <span class="clr-danger">*</span></p>
+                        <div class="select-wrapper">
+                            <div class="cutom-select" id="first-step">
+                                <div class="select-tag">
+                                    <span class="select-name">--Select--</span>
+                                    <div class="select-option-list">
+                                        <div class="option">--Select--</div>
+                                        <div class="option option-main">HCL</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="label">Module <span class="clr-danger">*</span></p>
+                        <div class="select-wrapper">
+                            <div class="cutom-select" id="second-step">
+                                <div class="select-tag">
+                                    <span class="select-name">--Select--</span>
+                                    <div class="select-option-list">
+                                        <div class="option">--Select--</div>
+                                        <div class="option option-main">Incident Management</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-tickets-wrapper">
+                <div class="top-head">
+                    <p class="type-btn">My Tickets</p>
+                    <img src="assets/images/my-tickets-left.jpg">
+                </div>
+                <div class="tab-wrapper">
+                    <ul class="nav catalog-form-tab" role="tablist">
+                        <li class="">
+                            <a class="clr-primary active" data-bs-toggle="pill" href="#0-tickets" id="tab-head-zero">0
+                                Tickets</a>
+                        </li>
+                        <li class="">
+                            <a class="clr-warning" data-bs-toggle="pill" href="#in-process" id="tab-head-first"
+                                disabled>In-Process</a>
+                        </li>
+                        <li class="">
+                            <a class="clr-danger" data-bs-toggle="pill" href="#failed" id="tab-head-second"
+                                disabled>Failed</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="0-tickets" class="tab-pane active">
+                            <table class="my-ticket-table" id="my-ticket-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>TICKET DETAILS</p>
+                                                <img src="assets/images/TICKET-FILTER.jpg">
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>INFORMATION</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>RUNBOOK</p>
+                                                <img src="assets/images/TICKET-FILTER.jpg">
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>ACTION</p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="left-warning">
+                                            <h6>System ip-10-10-54-79.demo-dryice.com is under loading impacting
+                                                Employee
+                                                Record.</h6>
+                                            <p>System ip-10-10-54-79.demo-dryice.com is under loading impacting Employee
+                                                Record.</p>
+                                            <span class="dot-primary">INC0587249</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">12/5/2022
+                                                12:50:48
+                                                PM</span>
+                                        </td>
+                                        <td>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                        </td>
+                                        <td>
+                                            <button disabled>cpu_utilization</button>
+                                        </td>
+                                        <td>
+                                            <button disabled>Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="no-data-tr">
+                                        <td>No data availble.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="table-pagination">
+                                <div class="counts-wrapper">
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-back.jpg"></button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-prev.jpg"></button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="number">0</button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-next.jpg"></button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-forward.jpg"></button>
+                                    </div>
+                                    <p class="m-0">Show results per page</p>
+                                    <button class="selct-type">10</button>
+                                </div>
+                                <div class="item-wrapper">
+                                    <span class="items-num" style="display: none;">1 - 1 of 1 items</span>
+                                    <span class="no-item">No items to display</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="in-process" class="tab-pane fade">
+                        </div>
+                        <div id="failed" class="tab-pane fade">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-tickets-wrapper table-logs" id="log-table">
+                <div class="top-head">
+                    <p class="type-text">Logs</p>
+                    <img src="assets/images/my-tickets-left.jpg">
+                </div>
+                <div class="tab-pane">
+                    <table class="my-ticket-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <p>NUMBER</p>
+                                </th>
+                                <th>
+                                    <p>INTRACTION ID</p>
+                                </th>
+                                <th>
+                                    <p>RUNBOOK NAME</p>
+                                </th>
+                                <th>
+                                    <p>LOG DATE TIME</p>
+                                </th>
+                                <th>
+                                    <p>RUNBOOK STATUS</p>
+                                </th>
+                                <th>
+                                    <p>STATUS REASON</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td>cpu_utilization</td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>initiated Execution</td>
+                                <td>Queued for Execution.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Assignation Decision</td>
+                                <td>Picked for Auto Exec.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Move to Assignation Decision</td>
+                                <td>Parsing Completed</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Parsing</td>
+                                <td>Picked for parsing</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Move for Parsing</td>
+                                <td>Recommendation Compl.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Recommendation</td>
+                                <td>Picked for recommend.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Recommendation</td>
+                                <td>Picked for recommend.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Data Collected</td>
+                                <td>Data Collected.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr class="no-data-tr">
+                                <td>No data availble.</td>
+                            </tr>
+                            <tr class="highlighter"></tr>
+                        </tbody>
+                    </table>
+                    <div class="table-pagination">
+                        <div class="counts-wrapper">
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-back.jpg"></button>
+                            </div>
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-prev.jpg"></button>
+                            </div>
+                            <div class="counts">
+                                <button class="number">0</button>
+                                <button class="number number-2" style="display: none;">2</button>
+                            </div>
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-next.jpg"></button>
+                            </div>
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-forward.jpg"></button>
+                            </div>
+                            <p class="m-0">Show results per page</p>
+                            <button class="selct-type">10</button>
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="items-num" style="display: none;">1 - 8 of 8 items</span>
+                            <span class="no-item">No items to display</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" style="background-color:#0077b5;padding: 10px 40px;color: #fff;">
+            <p class="mb-0">Copyright © HCL Software 2023</p>
+        </div>
+    </div>
+    <div class="thank-you" style="display: none;">
+        <div class="start-up-wrapper">
+            <img src="assets/images/iautomate.png" alt="Lucy" width="50" height="65">
+            <h2>Thank You</h2>
+            <div class="thank-dec">
+                <p><b>Learn More</b></p>
+                <p><a href="https://www.dryice.ai">www.dryice.ai</a></p>
+            </div>
+            <div class="start-up-btn">
+                <a href="3.html" class="btn btn-pill-primary highlight-layer">Start Over</a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/shepherd.min.js"></script>
+    <script>
+        jQuery('body').keydown(function(e) {
+        if (e.keyCode == 27 || e.keyCode == 116 || e.keyCode == 112 || e.keyCode == 114 || e.keyCode == 117 || e.keyCode == 118 || e.keyCode == 122 || e.keyCode == 123) {
+            return false;
+        }
+    });
+        $('table.my-ticket-table, .my-tickets-wrapper .tab-wrapper .tab-content .tab-pane').on('scroll mousewheel touchmove', function (e) { e.preventDefault(); e.stopPropagation(); return false; })
+        $('.select-tag .option').on('click', function () {
+            $(this).closest('.select-tag').find('.select-name').text($(this).text());
+        });
+        var logsEntry = [
+            '<tr class="auto-1">\
+                            <td>INC0587249</td>\
+                            <td>0</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Initiate Interaction</td>\
+                            <td>Picked for Initiatio.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-0">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Interaction ID Generated (Run Book In Progress)</td>\
+                            <td></td>\
+                        </tr>',
+            '<tr class="auto-10">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-2">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-3">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-4">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-5">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-6">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-7">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-11">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-12">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-9">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Execution Successfull, Issue Resolved</td>\
+                            <td>Return Message: RBA.. <span class="text-link">view more</span></td>\
+                        </tr>',
+            '<tr class="auto-8">\
+                            <td>INC0587249</td>\
+                            <td>0</td>\
+                            <td></td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Marked for Delete</td>\
+                            <td></td>\
+                        </tr>',
+        ];
+        var loginterval = "";
+        var logtimeout = "";
+        const tour = new Shepherd.Tour({
+            useModalOverlay: true,
+            exitOnEsc: false,
+            keyboardNavigation: false,
+            defaultStepOptions: {
+                classes: 'shadow-md bg-purple-dark',
+                scrollTo: false
+            }
+        });
+        var thirdStep = 'right';
+
+        if ($(window).width() < 991) {
+            thirdStep = 'bottom';
+        }
+        tour.addSteps([
+            {
+                arrow: false,
+                text: "Select Organization.",
+                attachTo: {
+                    element: '#first-step',
+                    on: 'bottom-end',
+                },
+                when: {
+                    show: () => {
+                        $('#first-step').on('click', function () {
+                            $(this).addClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+                highlightClass: 'highlight-layer',
+                classes: 'example-step-extra-class',
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select Organization -- HCL",
+                attachTo: {
+                    element: '#first-step',
+                    on: 'bottom-end',
+                },
+                highlightClass: 'highlight-layer',
+                classes: 'example-step-extra-class',
+                when: {
+                    show: () => {
+                        $('#first-step').off('click').unbind('click');
+                        $('#first-step .option-main').on('click', function (e) {
+                            e.preventDefault(); e.stopPropagation();
+                            $(this).closest('#first-step').removeClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select Module.",
+                attachTo: {
+                    element: '#second-step',
+                    on: 'bottom-end',
+                },
+                highlightClass: 'highlight-layer',
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#second-step').on('click', function () {
+                            $(this).addClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select Module -- Incident Management",
+                attachTo: {
+                    element: '#second-step',
+                    on: 'bottom-end',
+                },
+                highlightClass: 'highlight-layer',
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#second-step').off('click').unbind('click');
+                        $('#second-step .option-main').off('click').unbind('click');
+                        $('#second-step').addClass('active');
+                        $('#second-step .option-main').on('click', function (e) {
+                            e.preventDefault(); e.stopPropagation();
+                            $(this).closest('#second-step').removeClass('active');
+                            $('table.my-ticket-table').addClass('active');
+                            $('.table-pagination .item-wrapper .items-num').show();
+                            $('.table-pagination .item-wrapper .no-item').hide();
+                            $('.table-pagination .counts-wrapper .counts .number:first-child').text('1');
+                            tour.next();
+                        });
+                        $('table.my-ticket-table').removeClass('active');
+                        $('.table-pagination .item-wrapper .items-num').hide();
+                        $('.table-pagination .item-wrapper .no-item').show();
+                        $('.table-pagination .counts-wrapper .counts .number:first-child').text('0');
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "As this is an auto execution, no manual intervention is required. Tickets in this Organization and Module can now be viewed in TICKET DETAILS.",
+                attachTo: {
+                    element: '#my-ticket-table',
+                    on: 'top',
+                },
+                classes: 'my-ticket-table',
+                buttons: [
+                    {
+                        text: 'Previous',
+                        classes: 'previous',
+                        action: tour.back
+                    },
+                    {
+                        text: 'Next',
+                        action: () => {
+                            tour.next();
+                        }
+                    }
+                ],
+                highlightClass: 'highlight-layer',
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                scrollTo: true,
+                arrow: false,
+                text: "A complete overview of the ticket status can be found in the Ticket Logs section.",
+                attachTo: {
+                    element: '#log-table',
+                    on: 'top-start',
+                },
+                classes: 'log-table-1',
+                buttons: [
+                    {
+                        text: 'Previous',
+                        classes: 'previous',
+                        action: () => {
+                            $('html, body').scrollTop('0');
+                            tour.back();
+                        }
+                    },
+                    {
+                        text: 'Next',
+                        action: () => {
+                            tour.next();
+                        }
+                    }
+                ],
+                when: {
+                    show: () => {
+                        $('.table-pagination .counts-wrapper .counts .number-2').hide();
+                        $('#log-table .table-pagination .item-wrapper .items-num').text('1 - 8 of 8 items');
+                    }
+                },
+                highlightClass: 'highlight-layer',
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Depending on the stage, the RUNBOOK STATUS keeps changing",
+                attachTo: {
+                    element: '#log-table',
+                    on: 'top',
+                },
+                classes: 'log-table-2',
+                buttons: [
+                    {
+                    text: 'Finish',
+                    action: ()=>{window.location.href = "index.html?selection";}
+                    }
+                ], 
+                when: {
+                    show: () => {
+                        clearInterval(logtimeout);
+                        $('.table-pagination .counts-wrapper .counts .number-2').hide();
+                        $('#log-table table tbody').addClass('active');
+                        logsEntry.forEach(function (el, i) {
+                            var random = Math.floor(Math.random() * 3) + 1;
+                            var randomFirst  = random + '000';
+                            var randomNumber = Number(randomFirst);
+                            if (i == 2) {
+                                $('.table-pagination .counts-wrapper .counts .number-2').show();
+                            }
+                            loginterval = setTimeout(() => {
+                                var normalI = i + 1;
+                                $('#log-table table tbody tr.highlighter').css('height', normalI * 34 + 'px');
+                                $('#log-table table tbody').prepend(logsEntry[i]);
+                                $('#log-table .table-pagination .item-wrapper .items-num').text('1 - 10 of ' + (normalI + 8) + ' items');
+                                if(i == logsEntry.length - 1){
+                                    setTimeout(() => {
+                                    $('table.my-ticket-table').addClass('finish');}, 600);
+                                }
+                            }, i * randomNumber);
+                        });
+                    }
+                },
+                highlightClass: 'highlight-layer',
+                modalOverlayOpeningPadding: 2
+            }
+        ]);
+        tour.start();
+    </script>
+</body>
+
+</html>

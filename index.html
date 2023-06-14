@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://dryice-mycloud.netlify.app/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Dryice | iAutomate</title>
+    <link rel="icon" href="assets/images/iautomate.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        width: 100%;
+        height: 100vh;
+
+        background-color: rgb(51, 57, 64, 0.3);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+          linear-gradient(
+            to right top,
+            #343a40,
+            #2b2c31,
+            #211f22,
+            #151314,
+            #000000
+          );
+        background-blend-mode: multiply;
+      }
+      h1 {
+        font-weight: 700 !important;
+      }
+      .header {
+        font-size: 20px;
+      }
+      .btn1 {
+        background-color: #a2d9ee;
+        color: black;
+        font-size: 1.5em;
+        font-weight: 500;
+        padding: 0.7em 1.9em;
+        border-radius: 20px;
+        border: none;
+        transition: all 0.2s ease;
+      }
+        .preloader-wrapper button.btn.btn-primary {
+    width: auto;
+    display: inline-block;
+    background-color: #a2d9ee !important;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 0.6em 1.9em;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+      .btn1:hover, .preloader-wrapper button.btn.btn-primary:hover {
+        background-color: rgba(162, 216, 238, 0.5) !important;
+      }
+
+      .use-case-wrapper {
+        width: 70%;
+        height: 75%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(to right, #33e6d6, #217ca8, #020634);
+        background-position: center left;
+        box-shadow: 0 0 100px 0 rgb(0 0 0 / 80%);
+
+        z-index: 1;
+        background: url("assets/images/popup-bg.png") no-repeat !important;
+        background-size: cover !important;
+      }
+      .use-case {
+        width: 360px;
+        height: max-content;
+        cursor: pointer;
+        color: black;
+        background-color: white !important;
+        margin: 1em 1em;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 0 rgb(0 0 0 / 20%);
+      }
+      .use-case-wrapper .use-case {
+    background: #0077b529;
+    padding: 30px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.use-case-wrapper .use-case img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+.use-case-wrapper .use-case a {
+    background: #0077b5;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 30px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+      .use-case a {
+        text-decoration: none;
+      }
+
+      .use-case a:hover {
+        color: white;
+      }
+      .use-case p {
+        margin-bottom: 0.8em;
+      }
+
+      .btn-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .usecase-btn {
+        background: #0077b5;
+        color: #fff;
+        text-decoration: none;
+        padding: 1px 30px;
+        /* display: inline-block; */
+        cursor: pointer;
+        border-style: none;
+        border-radius: 0.2em;
+        margin: 0.5em 0.5em;
+        margin-bottom: 0.6em;
+        transition: all 0.2s ease;
+      }
+      .usecase-btn:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: -5%;
+        background: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 36px;
+        color: white;
+        border: 2px solid white;
+        background: grey;
+      }
+      .close-btn:hover {
+        color: black;
+      }
+      .use-case:hover {
+        transform: none !important;
+      }
+      .image_wrapper {
+    width: 100%;
+    max-width: 550px;
+    max-height: 300px;
+}
+div#prelaoder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9;
+    padding: 4%;
+    overflow: auto;
+}
+.preloader-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    align-items: flex-end;
+}
+
+.preloader-wrapper h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+.preloader-wrapper h4 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.preloader-wrapper p {
+    text-align: right;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.preloader-wrapper p span {
+    display: inline-block;
+    height: 10px;
+    background: #3aaae5;
+    width: 100%;
+    max-width: 200px;
+}
+
+.preloader-wrapper h5 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+body:not(.loaded) .main-wrapper{
+  display: none !important;
+}
+body.loaded #prelaoder{
+  display: none !important;
+}
+    </style>
+  </head>
+
+  <body class="text-light">
+    <div id="prelaoder" class="text-end">
+      <div class="preloader-wrapper">
+      <h2>DRYiCE iAutomate</h2>
+      <h4>DRYiCE iAutomate provides Intelligent Runbook</h4>
+      <p class=""><span></span></p>
+      <h5>Product Tour</h5>
+      <button onclick="loaded()" class="btn btn-primary">Start</button></div>
+    </div>
+    <div style="height: 100%" class="main-wrapper d-flex flex-column position-relative">
+      <div class="use-case-wrapper visually-hidden use-case-modal position-absolute d-flex justify-content-evenly align-items-center rounded">
+        <div class="use-case">
+          <img src="assets/images/DRYiCE iAutomate-Black.png" alt="" width="100">
+          <p>Auto Execution View</p>
+
+          <div class="btn-wrapper justify-content-center">
+            <a href="1.html" class="usecase-btn">Click through</a>
+          </div>
+        </div>
+        <div class="use-case">
+          <img src="assets/images/DRYiCE iAutomate-Black.png" alt="" width="100">
+          <p>Actionable Tickets New</p>
+
+          <div class="btn-wrapper justify-content-center">
+            <a href="2.html" class="usecase-btn">Click through</a>
+          </div>
+        </div>
+      </div>
+      <div class="darkspace d-flex justify-content-center d-flex flex-grow-1 align-items-center">
+        <div class="m-2 p-2">
+          <h1>
+            <img src="assets/images/DRYiCE iAutomate-white.png" alt="logo" width="356" height="110">
+          </h1>
+          <h2 class="h1 mt-5">
+            DRYiCE iAutomate provides <br> Intelligent Runbook
+          </h2>
+          <p class="header mt-3 lh-sm">
+            DRYiCE iAutomate provides Intelligent Runbook<br>
+            Automation capabilities for automating<br>
+            the IT Operations resolution lifecycle
+          </p>
+          <div class="d-flex gap-4">
+            <button class="btn1 my-5" onclick="toggle()">
+              EXPERIENCE iAUTOMATE
+            </button>
+            <!-- <button class="btn2 my-5">Video Tutorial</button> -->
+          </div>
+        </div>
+        <div class="m-2 p-2">
+           <div class="image_wrapper">
+            <img src="assets/images/iautomate_home.jpg" alt="iautomate_home">
+           </div>
+        </div>
+      </div>
+      <footer class="flex text-center bottom-0 m-4">
+        <p>Copyright © HCL Software 2023</p>
+      </footer>
+    </div>
+    <script>
+      function loaded(){
+        let body = document.getElementsByTagName("body")[0];
+        body.classList.add("loaded");
+      }
+      var element = document.querySelector(".use-case-wrapper");
+      var wrapper = document.querySelector(".darkspace");
+
+      function toggle() {
+        var popup = document.querySelector(".use-case-wrapper");
+        popup.classList.remove("visually-hidden");
+
+        var x = false;
+        setTimeout(() => {
+          document.addEventListener("click", function (event) {
+            const isClosest = event.target.closest(".use-case-wrapper");
+            var frame1 = document.querySelector("#iframeDisplay1");
+            var frame2 = document.querySelector("#iframeDisplay2");
+
+            if (!x) {
+              if (!isClosest && !popup.classList.contains("visually-hidden")) {
+                popup.classList.add("visually-hidden");
+                x = true;
+              }
+            }
+          });
+        }, 250);
+      }
+
+      function getAllUrlParams(url) {
+        var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+        var obj = {};
+
+        if (queryString) {
+            queryString = queryString.split('#')[0];
+            var arr = queryString.split('&');
+
+            for (var i = 0; i < arr.length; i++) {
+            var a = arr[i].split('=');
+            var paramName = a[0];
+            var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+            paramName = paramName.toLowerCase();
+            if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+            if (paramName.match(/\[(\d+)?\]$/)) {
+                var key = paramName.replace(/\[(\d+)?\]/, '');
+                if (!obj[key]) obj[key] = [];
+
+                if (paramName.match(/\[\d+\]$/)) {
+                var index = /\[(\d+)\]/.exec(paramName)[1];
+                obj[key][index] = paramValue;
+                } else {
+                obj[key].push(paramValue);
+                }
+            } else {
+                if (!obj[paramName]) {
+                obj[paramName] = paramValue;
+                } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+                obj[paramName] = [obj[paramName]];
+                obj[paramName].push(paramValue);
+                } else {
+                obj[paramName].push(paramValue);
+                }
+            }
+            }
+        }
+
+        return obj;
+      }
+      if(getAllUrlParams(window.location.href)['selection'] == true){
+        loaded();
+        toggle();
+      }
+    </script>
+  
+
+</body></html>

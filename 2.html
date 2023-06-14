@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html style="">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Dryice | iAutomate</title>
+    <link rel="icon" href="assets/images/iautomate.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="main-dashboard body-flex" style="">
+    <div class="all-wrapper">
+        <div class="top-bar-main d-flex justify-content-between" style="padding: 0 40px ;background:#0077b5;color: #fff;">
+            <img src="assets/images/DRYiCE iAutomate-white.png" style="padding: 6px 0; object-fit: contain; width: auto;" width="140" height="45">
+            <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+                <img src="assets/images/top-bar-cta.PNG">
+            </div>
+        </div>
+        <div class="menu-bar" style="background-color:#dcdddd;padding: 0px 40px;color: #0070ab;">
+            <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Enviroment</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Run Books</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Knowledge</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Analysis</p>
+                </li>
+                <li class="me-2 third-step">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Tickets</p>
+                    <div class="sub-menu" id="third-step">
+                        <a href="1.html" class="m-0 d-block option-main">Auto Execution View</a>
+                        <a class="m-0 d-block" disabled>Actionable Tickets New</a>
+                    </div>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Ticket Logs</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Dashboard</p>
+                </li>
+                <li class="me-2">
+                    <img src="assets/images/my-account.PNG" class="me-1">
+                    <p class="m-0">Help</p>
+                </li>
+            </ul>
+        </div>
+        <div class="container-type" style="padding: 0 25px;">
+            <div class="auto-execution">
+                <h4>Auto Execution View</h4>
+                <div class="input-wrapper">
+                    <div class="form-group">
+                        <p class="label">Organization <span class="clr-danger">*</span></p>
+                        <div class="select-wrapper">
+                            <div class="cutom-select" id="first-step">
+                                <div class="select-tag">
+                                    <span class="select-name">--Select--</span>
+                                    <div class="select-option-list">
+                                        <div class="option">--Select--</div>
+                                        <div class="option option-main">HCL</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="label">Module <span class="clr-danger">*</span></p>
+                        <div class="select-wrapper">
+                            <div class="cutom-select" id="second-step">
+                                <div class="select-tag">
+                                    <span class="select-name">--Select--</span>
+                                    <div class="select-option-list">
+                                        <div class="option">--Select--</div>
+                                        <div class="option option-main">Incident Management</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-tickets-wrapper">
+                <div class="top-head">
+                    <div class="tickets-btn">
+                        <p class="type-btn">My Tickets</p>
+                        <button class="type-btn-primary" id="all-ticket">All Tickets</button>
+                    </div>
+                    <img src="assets/images/my-tickets-left.jpg">
+                </div>
+                <div class="tab-wrapper">
+                    <ul class="nav catalog-form-tab" role="tablist">
+                        <li class="">
+                            <a class="clr-primary active" data-bs-toggle="pill" href="#0-tickets" id="tab-head-zero"
+                                disabled="disabled">0
+                                Tickets</a>
+                        </li>
+                        <li class="">
+                            <a class="clr-warning" data-bs-toggle="pill" href="#in-process" id="tab-head-first" disabled>0
+                                Assigned</a>
+                        </li>
+                        <li class="">
+                            <a class="clr-danger" data-bs-toggle="pill" href="#failed" id="tab-head-second">0
+                                Un-Assigned</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="0-tickets" class="tab-pane active">
+                            <table class="my-ticket-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>TICKET DETAILS</p>
+                                                <img src="assets/images/TICKET-FILTER.jpg">
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>INFORMATION</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>RUNBOOK</p>
+                                                <img src="assets/images/TICKET-FILTER.jpg">
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>ACTION</p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Employee Record on 41.89.225.30</h6>
+                                            <p>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Empl.. <span class="text-link">view more</span></p>
+                                            <span class="dot-primary">INC053269</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Employee Record on 125.107.155.13</h6>
+                                            <p>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Empl.. <span class="text-link">view more</span></p>
+                                            <span class="dot-primary">INC053268</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: SCOM: Instance cannot connect to SSRS web
+                                                service.(rsReportServerDatabaseError). Database ReportServerTempDB is being
+                                                Recovered on server 229.196.16.76</h6>
+                                            <p>DCC: SCOM: Instance cannot connect to SSRS web
+                                                service.(rsReportServerDatabaseError). Database Report.. <span
+                                                    class="text-link">view more</span></p>
+                                            <span class="dot-primary">INC053267</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: SCOM SQLAAgent$VMWARE : The Windows service for the SQL Server Agent
+                                                for instance has stopped on computer CHAARSMDBPW01 democustomer com with IP
+                                            </h6>
+                                            <p>DCC: SCOM SQLAAgent$VMWARE : The Windows service for the SQL Server Agent for
+                                                instance has stopped on computer.. <span class="text-link">view more</span>
+                                            </p>
+                                            <span class="dot-primary">INC053269</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="no-data-tr">
+                                        <td>No data availble.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="table-pagination">
+                                <div class="counts-wrapper">
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-back.jpg"></button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-prev.jpg"></button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="number">0</button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-next.jpg"></button>
+                                    </div>
+                                    <div class="counts">
+                                        <button class="icon"><img src="assets/images/table-forward.jpg"></button>
+                                    </div>
+                                    <p class="m-0">Show results per page</p>
+                                    <button class="selct-type">10</button>
+                                </div>
+                                <div class="item-wrapper">
+                                    <span class="items-num" style="display: none;">1 - 1 of 1 items</span>
+                                    <span class="no-item">No items to display</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="in-process" class="tab-pane fade">
+                        </div>
+                        <div id="failed" class="tab-pane fade">
+                            <table class="my-ticket-table active table-case-2" id="my-ticket-unassigned-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>TICKET DETAILS</p>
+                                                <img src="assets/images/TICKET-FILTER.jpg">
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>INFORMATION</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>RUNBOOK</p>
+                                                <img src="assets/images/TICKET-FILTER.jpg">
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between">
+                                                <p>ACTION</p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Employee Record on 41.89.225.30</h6>
+                                            <p>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Empl.. <span class="text-link">view more</span></p>
+                                            <span class="dot-primary">INC053269</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span id="table-guide"><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span id="table-related-ticket"><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary" id="table-select-runbook"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Employee Record on 125.107.155.13</h6>
+                                            <p>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State
+                                                impacting application Empl.. <span class="text-link">view more</span></p>
+                                            <span class="dot-primary">INC053268</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: SCOM: Instance cannot connect to SSRS web
+                                                service.(rsReportServerDatabaseError). Database ReportServerTempDB is being
+                                                Recovered on server 229.196.16.76</h6>
+                                            <p>DCC: SCOM: Instance cannot connect to SSRS web
+                                                service.(rsReportServerDatabaseError). Database Report.. <span
+                                                    class="text-link">view more</span></p>
+                                            <span class="dot-primary">INC053267</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>DCC: SCOM SQLAAgent$VMWARE : The Windows service for the SQL Server Agent
+                                                for instance has stopped on computer CHAARSMDBPW01 democustomer com with IP
+                                            </h6>
+                                            <p>DCC: SCOM SQLAAgent$VMWARE : The Windows service for the SQL Server Agent for
+                                                instance has stopped on computer.. <span class="text-link">view more</span>
+                                            </p>
+                                            <span class="dot-primary">INC053269</span>
+                                            <span><img src="assets/images/clock.jpg" alt="" width="14">11/30/2022 11:48:26
+                                                AM</span>
+                                        </td>
+                                        <td class="info-btn">
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Guide</span>
+                                            <span><img src="assets/images/table-giude.png" alt="" width="24"
+                                                    class="me-1">Related Ticket</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary"><img src="assets/images/slect-runbook.jpg">
+                                                Select Runbook</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Release</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="no-data-tr">
+                                        <td>No data availble.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-tickets-wrapper table-logs" id="log-table">
+                <div class="top-head">
+                    <p class="type-text">Logs</p>
+                    <img src="assets/images/my-tickets-left.jpg">
+                </div>
+                <div class="tab-pane">
+                    <table class="my-ticket-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <p>NUMBER</p>
+                                </th>
+                                <th>
+                                    <p>INTRACTION ID</p>
+                                </th>
+                                <th>
+                                    <p>RUNBOOK NAME</p>
+                                </th>
+                                <th>
+                                    <p>LOG DATE TIME</p>
+                                </th>
+                                <th>
+                                    <p>RUNBOOK STATUS</p>
+                                </th>
+                                <th>
+                                    <p>STATUS REASON</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td>cpu_utilization</td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>initiated Execution</td>
+                                <td>Queued for Execution.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Assignation Decision</td>
+                                <td>Picked for Auto Exec.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Move to Assignation Decision</td>
+                                <td>Parsing Completed</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Parsing</td>
+                                <td>Picked for parsing</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Move for Parsing</td>
+                                <td>Recommendation Compl.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Recommendation</td>
+                                <td>Picked for recommend.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Picked for Recommendation</td>
+                                <td>Picked for recommend.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    INC0587249
+                                </td>
+                                <td>0</td>
+                                <td></td>
+                                <td>12/5/2022 12:52:00 PM</td>
+                                <td>Data Collected</td>
+                                <td>Data Collected.. <span class="text-link">view more</span></td>
+                            </tr>
+                            <tr class="no-data-tr"><td>No data availble.</td></tr>
+                            <tr class="highlighter"></tr>
+                        </tbody>
+                    </table>
+                    <div class="table-pagination">
+                        <div class="counts-wrapper">
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-back.jpg"></button>
+                            </div>
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-prev.jpg"></button>
+                            </div>
+                            <div class="counts">
+                                <button class="number">1</button>
+                                <button class="number number-2" style="display: none;">2</button>
+                            </div>
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-next.jpg"></button>
+                            </div>
+                            <div class="counts">
+                                <button class="icon"><img src="assets/images/table-forward.jpg"></button>
+                            </div>
+                            <p class="m-0">Show results per page</p>
+                            <button class="selct-type">10</button>
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="items-num" style="display: none;">1 - 8 of 8 items</span>
+                            <span class="no-item">No items to display</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" style="background-color:#0077b5;padding: 10px 40px;color: #fff;">
+            <p class="mb-0">Copyright © HCL Software 2023</p>
+        </div>
+    </div>
+    <div class="guide-popup" style="display: none;">
+        <img src="assets/images/guide-popup.png" id="guide-popup-step">
+    </div>
+    <div class="related-popup" style="display: none;">
+        <img src="assets/images/Related-popup.png" id="related-popup-step">
+    </div>
+    <div class="select-runbook-wrapper" style="display: none;">
+        <div class="select-runbook">
+            <div class="rubook-head">
+                Ticket Details : INC0543269
+                <img src="assets/images/runbook-close.jpg" alt="">
+            </div>
+            <div class="runbook-main">
+                <div class="runbook-top" id="runbook-mentioned">
+                    <div class="runbook-top-row">
+                        <h6>Summary</h6>
+                        <p>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State impacting
+                            application Employee Record on 41.89.225.30</p>
+                    </div>
+                    <div class="runbook-top-row">
+                        <h6>Description</h6>
+                        <p>DCC: Server CPU Utilization on DEMO website is high and in CRITICAL State impacting
+                            application Employee Record on 41.89.225.30</p>
+                    </div>
+                </div>
+                <div class="runbook-table-wrapper">
+                    <h4>Select Runbook</h4>
+                    <div class="runbook-table" id="runbook-table-main">
+                        <div class="runtable-head">
+                            <div class="run-td">Runbook Name</div>
+                            <div class="run-td">Confidence Score %</div>
+                            <div class="run-td">SME Approved</div>
+                            <div class="run-td"></div>
+                        </div>
+                        <div class="runbook-tbody">
+                            <div class="run-row">
+                                <div class="run-td">CPU_Utilization</div>
+                                <div class="run-td">79</div>
+                                <div class="run-td"><img src="assets/images/td-grey.jpg"></div>
+                                <div class="run-td" id="runbook-collapse"><img src="assets/images/runbook-down.png"></div>
+                            </div>
+                            <div class="collapse-wrapper" style="display: none;">
+                                <h4>Runbook Description</h4>
+                                <p>The runbook will reduce the CPU Utilization on a Server. CRITICAL State impacting application Employee Record.</p>
+                                <div class="runbook-table">
+                                    <div class="runtable-head">
+                                        <div class="run-td">Parameter Name</div>
+                                        <div class="run-td">Value</div>
+                                    </div>
+                                    <div class="runbook-tbody">
+                                        <div class="run-row">
+                                            <div class="run-td">incidentNumber</div>
+                                            <div class="run-td"><div class="box-wrapper">INC0543269</div></div>
+                                        </div>
+                                        <div class="run-row">
+                                            <div class="run-td">IPAddress</div>
+                                            <div class="run-td"><div class="box-wrapper">41.89.225.30</div></div>
+                                        </div>
+                                        <div class="run-row">
+                                            <div class="run-td">Tenantld</div>
+                                            <div class="run-td"><div class="box-wrapper">Demo000001</div></div>
+                                        </div>
+                                        <div class="run-row">
+                                            <div class="run-td">AlertDescription</div>
+                                            <div class="run-td"><div class="box-wrapper">Server CPU Utilization on DEMO website is high and in CRITICAL State impacting application Employee</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="btn" id="runbook-execute">Execute</p>
+                            </div>
+                            <div class="run-row">
+                                <div class="run-td">Windows App Pool Restart</div>
+                                <div class="run-td">34</div>
+                                <div class="run-td"><img src="assets/images/td-white.jpg"></div>
+                                <div class="run-td"><img src="assets/images/runbook-down.png"></div>
+                            </div>
+                            <div class="run-row">
+                                <div class="run-td">ApplicationPerformanceIssue</div>
+                                <div class="run-td">23</div>
+                                <div class="run-td"><img src="assets/images/td-grey.jpg"></div>
+                                <div class="run-td"><img src="assets/images/runbook-down.png"></div>
+                            </div>
+                            <div class="run-row">
+                                <div class="run-td">ProcessRestartWorkFlow</div>
+                                <div class="run-td">19</div>
+                                <div class="run-td"><img src="assets/images/td-white.jpg"></div>
+                                <div class="run-td"><img src="assets/images/runbook-down.png"></div>
+                            </div>
+                            <div class="run-row">
+                                <div class="run-td">Log File Error</div>
+                                <div class="run-td">17</div>
+                                <div class="run-td"><img src="assets/images/td-grey.jpg"></div>
+                                <div class="run-td"><img src="assets/images/runbook-down.png"></div>
+                            </div>
+                            <div class="run-row">
+                                <div class="run-td">SplunkScenario2</div>
+                                <div class="run-td">17</div>
+                                <div class="run-td"><img src="assets/images/td-white.jpg"></div>
+                                <div class="run-td"><img src="assets/images/runbook-down.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="runbook-succesfully-wrapper" style="display: none;">
+        <div class="runbook-succesfully">
+            <div class="runbook-head">iAutomate</div>
+            <div class="rubook-content">Runbook intiated successfully.</div>
+            <div class="runbook-footer"><button class="btn" id="success-ok">ok</button></div>
+        </div>
+    </div>
+    <div class="thank-you" style="display: none;">
+        <div class="start-up-wrapper">
+          <img src="assets/images/Logo_iautomate_black.png" alt="iControl" width="50" height="65">
+          <h2>Thank You</h2>
+          <div class="thank-dec">
+            <span>Learn More at</span>
+            <p><a href="https://www.dryice.ai">www.dryice.ai</a></p>
+          </div>
+          <div class="d-flex">
+            <div class="start-up-btn">
+              <a style="display: inline-flex; align-items: center; gap: 4px" href="index.html?selection" class="btn btn-pill-primary btn-highlight-layer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" fill="white">
+                  <path d="M240 856h147.692V620.615h184.616V856H720V496L480 314.462 240 496v360Zm-40 40V476l280-211.539L760 476v420H532.308V660.616H427.692V896H200Zm280-310.769Z"></path>
+                </svg>
+                Start Over</a>
+              <a href="https://www.dryice.ai/products-and-platforms/iautomate" style="
+                  background-color: white;
+                  color: black !important;
+                  cursor: pointer;
+                  display: inline-flex; align-items: center; gap: 4px;
+                " class="btn btn-pill-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" fill="black">
+                  <path d="M480 924q-72 0-135.5-27.5T234 822q-47-47-74.5-110.5T132 576q0-72 27.5-135.5T234 330q47-47 110.5-74.5T480 228q72 0 135.5 27.5T726 330q47 47 74.5 110.5T828 576q0 72-27.5 135.5T726 822q-47 47-110.5 74.5T480 924Zm0-27q38-48 62-93t39-102H379q17 61 40 106t61 89Zm-35-3q-31-33-57-85.5T350 702H186q36 82 105 133t154 59Zm70 0q85-8 154-59t105-133H610q-17 55-43 107.5T515 894ZM175 674h169q-5-26-7-50.5t-2-47.5q0-23 2-47.5t7-50.5H175q-7 21-11 47t-4 51q0 25 4 51t11 47Zm197 0h216q5-26 7-49.5t2-48.5q0-25-2-48.5t-7-49.5H372q-5 26-7 49.5t-2 48.5q0 25 2 48.5t7 49.5Zm244 0h169q7-21 11-47t4-51q0-25-4-51t-11-47H616q5 26 7 50.5t2 47.5q0 23-2 47.5t-7 50.5Zm-6-224h164q-37-84-103.5-133T515 257q31 38 56 89t39 104Zm-231 0h202q-17-60-41.5-107.5T480 255q-35 40-59.5 87.5T379 450Zm-193 0h164q14-53 39-104t56-89q-90 11-156 60.5T186 450Z"></path></svg>Visit Site</a>
+            </div>
+          </div>
+          <footer class="flex text-center bottom-0">
+            <span>Copyright Ⓒ 2023 HCL Software</span>
+          </footer>
+        </div>
+      </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/shepherd.min.js"></script>
+    <script>
+        jQuery('body').keydown(function(e) {
+        if (e.keyCode == 27 || e.keyCode == 116 || e.keyCode == 112 || e.keyCode == 114 || e.keyCode == 117 || e.keyCode == 118 || e.keyCode == 122 || e.keyCode == 123) {
+            return false;
+        }
+    });
+        $('table.my-ticket-table, .my-tickets-wrapper .tab-wrapper .tab-content .tab-pane').on('scroll mousewheel touchmove', function (e) { e.preventDefault(); e.stopPropagation(); return false; })
+    $('.select-tag .option').on('click', function(){
+        $(this).closest('.select-tag').find('.select-name').text($(this).text());
+    });
+    var logsEntry = [
+                        '<tr class="auto-1">\
+                            <td>INC0587249</td>\
+                            <td>0</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Initiate Interaction</td>\
+                            <td>Picked for Initiatio.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-0">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Interaction ID Generated (Run Book In Progress)</td>\
+                            <td></td>\
+                        </tr>',
+                        '<tr class="auto-10">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-2">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-3">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-4">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-5">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-6">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-7">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-11">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress</td>\
+                            <td>Return Message: | In.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-12">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>In Progress (Fetching Status)</td>\
+                            <td>Picked for status up.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-9">\
+                            <td>INC0587249</td>\
+                            <td>10281157</td>\
+                            <td>cpu_utilization</td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Execution Successfull, Issue Resolved</td>\
+                            <td>Return Message: RBA.. <span class="text-link">view more</span></td>\
+                        </tr>',
+                        '<tr class="auto-8">\
+                            <td>INC0587249</td>\
+                            <td>0</td>\
+                            <td></td>\
+                            <td>12/5/2022 12:52:00 PM</td>\
+                            <td>Marked for Delete</td>\
+                            <td></td>\
+                        </tr>',
+];
+var loginterval = "";
+var logtimeout = "";
+        const tour = new Shepherd.Tour({
+            useModalOverlay: true,
+            exitOnEsc: false,
+            keyboardNavigation: false,
+            defaultStepOptions: {
+                classes: 'shadow-md bg-purple-dark',
+                scrollTo: false
+            }
+        });
+        var thirdStep = 'right';
+
+        if ($(window).width() < 991) {
+            thirdStep = 'bottom';
+        }
+        tour.addSteps([
+            {
+                arrow: false,
+                text: "Select Organization.",
+                attachTo: {
+                    element: '#first-step',
+                    on: 'bottom-end',
+                },
+                when: {
+                    show: () => {
+                        $('#first-step').on('click', function(){
+                            $(this).addClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+            highlightClass: 'highlight-layer', 
+                classes: 'example-step-extra-class',
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select Organization -- HCL",
+                attachTo: {
+                    element: '#first-step',
+                    on: 'bottom-end',
+                },
+            highlightClass: 'highlight-layer', 
+                classes: 'example-step-extra-class',
+                when: {
+                    show: () => {
+                        $('#first-step').off('click').unbind('click');
+                        $('#first-step .option-main').on('click', function(e){
+                            e.preventDefault();e.stopPropagation();
+                            $(this).closest('#first-step').removeClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select Module.",
+                attachTo: {
+                    element: '#second-step',
+                    on: 'bottom-end',
+                },
+            highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#second-step').on('click', function(){
+                            $(this).addClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select Module -- Incident Management",
+                attachTo: {
+                    element: '#second-step',
+                    on: 'bottom-end',
+                },
+            highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#second-step').off('click').unbind('click');
+                        $('#second-step .option-main').off('click').unbind('click');
+                        $('#second-step').addClass('active');
+                        $('#second-step .option-main').on('click', function(e){
+                            e.preventDefault();e.stopPropagation();
+                            $(this).closest('#second-step').removeClass('active');
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select “All Tickets”",
+                attachTo: {
+                    element: '#all-ticket',
+                    on: 'right',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#all-ticket').on('click', function(){
+                            $('#tab-head-zero').text('37 Tickets');
+                            $('#tab-head-second').text('37 Un-Assigned');
+                            $(this).addClass('active');
+                            tour.next();
+                        });
+                        $('#all-ticket').removeClass('active');
+                        $('#tab-head-zero').text('0 Tickets');
+                        $('#tab-head-second').text('0 Un-Assigned');
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Select “Un-Assigned” Tab",
+                attachTo: {
+                    element: '#tab-head-second',
+                    on: 'right',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#tab-head-second').on('click', function(){
+                            setTimeout(()=>{
+                            $('table.my-ticket-table').addClass('active');
+                            tour.next();
+                            },150);
+                        });
+                        $('table.my-ticket-table').removeClass('active');
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "The ticket in this Organization and Module can now be seen in TICKET DETAILS.",
+                attachTo: {
+                    element: '#my-ticket-unassigned-table',
+                    on: 'top',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                buttons: [
+                    {
+                    text: 'Next',
+                    action: tour.next
+                    }
+                ], 
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "To understand the issues you can click on the “Guide” Option available here",
+                attachTo: {
+                    element: '#table-guide',
+                    on: 'left',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#table-guide').on('click', function(){
+                            $('.guide-popup').show();
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Upon clicking guide, you will see all relevant articles pertaining to the ticket in a popup window",
+                attachTo: {
+                    element: '#guide-popup-step',
+                    on: 'right',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                buttons: [
+                    {
+                    text: 'Next',
+                    action: ()=>{$('.guide-popup').hide();tour.next();}
+                    }
+                ], 
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "To see the similar tickets click on the “Related Ticket” option.",
+                attachTo: {
+                    element: '#table-related-ticket',
+                    on: 'left',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#table-related-ticket').on('click', function(){
+                            $('.related-popup').show();
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "All the related tickets based on ticket description are listed here.",
+                attachTo: {
+                    element: '#related-popup-step',
+                    on: 'top',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'related-popup-step',
+                buttons: [
+                    {
+                    text: 'Next',
+                    action: ()=>{$('.related-popup').hide();tour.next();}
+                    }
+                ], 
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Click on the Select Runbook icon to see recommended Runbooks.",
+                attachTo: {
+                    element: '#table-select-runbook',
+                    on: 'left',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#table-select-runbook').on('click', function(){
+                            $('.select-runbook-wrapper').show();
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "For this ticket description the recommended Runbooks are mentioned below.",
+                attachTo: {
+                    element: '#runbook-mentioned',
+                    on: 'bottom',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                buttons: [
+                    {
+                    text: 'Next',
+                    action: tour.next
+                    }
+                ], 
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Runbook Name recommended with the highest Confidence score of 79% is at the top of the list.",
+                attachTo: {
+                    element: '#runbook-table-main',
+                    on: 'bottom',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                buttons: [
+                    {
+                    text: 'Next',
+                    action: tour.next
+                    }
+                ], 
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "Click on the down arrow to check the parameters of this Runbook.",
+                attachTo: {
+                    element: '#runbook-collapse',
+                    on: 'bottom-end',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#runbook-collapse').on('click', function(){
+                            $('.runbook-table .collapse-wrapper').show();
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                useModalOverlay: false,
+                text: "After verifying the parameters, click on the “Execute” button to trigger this Runbook.",
+                attachTo: {
+                    element: '#runbook-execute',
+                    on: 'right',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#runbook-execute').on('click', function(){
+                            $('.select-runbook-wrapper, .runbook-table .collapse-wrapper').hide();
+                            $('.runbook-succesfully-wrapper').show();
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                arrow: false,
+                text: "The popup confirms that the selected Runbook is initiated successfully.",
+                attachTo: {
+                    element: '.runbook-succesfully',
+                    on: 'right',
+                },
+                highlightClass: 'highlight-layer', 
+                classes: 'tour',
+                when: {
+                    show: () => {
+                        $('#success-ok').on('click', function(){
+                            $('.runbook-succesfully-wrapper').hide();
+                            tour.next();
+                        });
+                    }
+                },
+                modalOverlayOpeningPadding: 2
+            },
+            {
+                scrollTo: true,
+                arrow: false,
+                text: "Depending on the stage, the RUNBOOK STATUS keeps changing",
+                attachTo: {
+                    element: '#log-table',
+                    on: 'top',
+                },
+                classes: 'log-table-2',
+                buttons: [
+                    {
+                    text: 'Finish',
+                    action: ()=>{$('.all-wrapper').hide();$('.thank-you').show();tour.complete();}
+                    }
+                ], 
+                when: {
+                    show: () => {
+                        clearInterval(logtimeout);
+                            $('.table-pagination .item-wrapper .items-num').show();
+                            $('.table-pagination .item-wrapper .no-item').hide();
+                        $('.table-pagination .counts-wrapper .counts .number-2').hide();
+                        $('#log-table table tbody').addClass('active');
+                        logsEntry.forEach(function (el, i) {
+                            var random = Math.floor(Math.random() * 3) + 1;
+                            var randomFirst  = random + '000';
+                            var randomNumber = Number(randomFirst);
+                            if(i == 2){
+                                $('.table-pagination .counts-wrapper .counts .number-2').show();
+                            }
+                            loginterval = setTimeout(() => {
+                                var normalI = i+1;  
+                                $('#log-table table tbody tr.highlighter').css('height', normalI*34+'px');
+                                $('#log-table table tbody').prepend(logsEntry[i]);
+                                $('#log-table .table-pagination .item-wrapper .items-num').text('1 - 10 of '+(normalI+8)+' items');
+                                if(i == logsEntry.length - 1){
+                                    setTimeout(() => {
+                                    $('table.my-ticket-table').addClass('finish');}, 600);
+                                }
+                            }, i*randomNumber);
+                        });
+                    }
+                },
+                highlightClass: 'highlight-layer',
+                modalOverlayOpeningPadding: 2
+            }
+        ]);
+        tour.start();
+    </script>
+</body>
+
+</html>
