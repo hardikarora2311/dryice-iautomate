@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/shepherd.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="main-dashboard body-flex" style="">
@@ -584,6 +586,7 @@
                             $('.table-pagination .item-wrapper .items-num').show();
                             $('.table-pagination .item-wrapper .no-item').hide();
                             $('.table-pagination .counts-wrapper .counts .number:first-child').text('1');
+                            $("#second-step .select-name").html("Incident Management")
                             tour.next();
                         });
                         $('table.my-ticket-table').removeClass('active');
@@ -604,12 +607,12 @@
                 classes: 'my-ticket-table',
                 buttons: [
                     {
-                        text: 'Previous',
+                        text: '',
                         classes: 'previous',
                         action: tour.back
                     },
                     {
-                        text: 'Next',
+                        text: '',
                         action: () => {
                             tour.next();
                         }
@@ -629,7 +632,7 @@
                 classes: 'log-table-1',
                 buttons: [
                     {
-                        text: 'Previous',
+                        text: '',
                         classes: 'previous',
                         action: () => {
                             $('html, body').scrollTop('0');
@@ -637,7 +640,7 @@
                         }
                     },
                     {
-                        text: 'Next',
+                        text: '',
                         action: () => {
                             tour.next();
                         }
@@ -662,7 +665,7 @@
                 classes: 'log-table-2',
                 buttons: [
                     {
-                    text: 'Finish',
+                    text: '',
                     action: ()=>{window.location.href = "index.html?selection";}
                     }
                 ], 

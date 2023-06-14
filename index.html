@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <!-- saved from url=(0035)https://dryice-mycloud.netlify.app/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Dryice | iAutomate</title>
-    <link rel="icon" href="assets/images/iautomate.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/shepherd.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <title>Dryice | iAutomate</title>
+    <link rel="icon" href="assets/images/iautomate.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/shepherd.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -36,31 +38,36 @@
         font-size: 20px;
       }
       .btn1 {
-        background-color: #a2d9ee;
-        color: black;
+        background-color: #0077b5;
+        color: white;
         font-size: 1.5em;
         font-weight: 500;
         padding: 0.7em 1.9em;
         border-radius: 20px;
-        border: none;
+        border: 2px solid #0077b5;
         transition: all 0.2s ease;
       }
-        .preloader-wrapper button.btn.btn-primary {
-    width: auto;
-    display: inline-block;
-    background-color: #a2d9ee !important;
-    color: black;
-    font-size: 1.5em;
-    font-weight: 500;
-    padding: 0.6em 1.9em;
-    border-radius: 20px;
-    border: none;
-    transition: all 0.2s ease;
-    line-height: 1;
-    margin-bottom: 30px;
-}
-      .btn1:hover, .preloader-wrapper button.btn.btn-primary:hover {
+      .preloader-wrapper button.btn.btn-primary {
+        width: auto;
+        display: inline-block;
+        background-color: #a2d9ee !important;
+        color: black;
+        font-size: 1.5em;
+        font-weight: 500;
+        padding: 0.6em 1.9em;
+        border-radius: 20px;
+        border: none;
+        transition: all 0.2s ease;
+        line-height: 1;
+        margin-bottom: 30px;
+      }
+      
+      .preloader-wrapper button.btn.btn-primary:hover {
         background-color: rgba(162, 216, 238, 0.5) !important;
+      }
+      .btn1:hover {
+        background-color: #0074b390;
+        box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.5);
       }
 
       .use-case-wrapper {
@@ -74,7 +81,7 @@
         box-shadow: 0 0 100px 0 rgb(0 0 0 / 80%);
 
         z-index: 1;
-        background: url("assets/images/popup-bg.png") no-repeat !important;
+        background: url("assets/images/popup-bg1.png") no-repeat !important;
         background-size: cover !important;
       }
       .use-case {
@@ -88,25 +95,25 @@
         box-shadow: 0 0 15px 0 rgb(0 0 0 / 20%);
       }
       .use-case-wrapper .use-case {
-    background: #0077b529;
-    padding: 30px 30px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-.use-case-wrapper .use-case img {
-    width: 150px;
-    margin-bottom: 10px;
-}
-.use-case-wrapper .use-case a {
-    background: #0077b5;
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 30px;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 0.5em;
-}
+        background: #0077b529;
+        padding: 30px 30px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+      .use-case-wrapper .use-case img {
+        width: 150px;
+        margin-bottom: 10px;
+      }
+      .use-case-wrapper .use-case a {
+        background: #0077b5;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 30px;
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 0.5em;
+      }
       .use-case a {
         text-decoration: none;
       }
@@ -160,84 +167,94 @@
         transform: none !important;
       }
       .image_wrapper {
-    width: 100%;
-    max-width: 550px;
-    max-height: 300px;
-}
-div#prelaoder {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: 9;
-    padding: 4%;
-    overflow: auto;
-}
-.preloader-wrapper {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Raleway', sans-serif;
-    align-items: flex-end;
-}
+        width: 100%;
+        max-width: 550px;
+        max-height: 300px;
+      }
+      div#prelaoder {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9;
+        padding: 4%;
+        overflow: auto;
+      }
+      .preloader-wrapper {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        font-family: "Raleway", sans-serif;
+        align-items: flex-end;
+      }
 
-.preloader-wrapper h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 70px;
-    margin-bottom: 30px;
-}
+      .preloader-wrapper h2 {
+        font-family: "Raleway", sans-serif;
+        font-size: 70px;
+        margin-bottom: 30px;
+      }
 
-.preloader-wrapper h4 {
-    font-size: 36px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
+      .preloader-wrapper h4 {
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
 
-.preloader-wrapper p {
-    text-align: right;
-    margin-bottom: 40px;
-    width: 100%;
-}
+      .preloader-wrapper p {
+        text-align: right;
+        margin-bottom: 40px;
+        width: 100%;
+      }
 
-.preloader-wrapper p span {
-    display: inline-block;
-    height: 10px;
-    background: #3aaae5;
-    width: 100%;
-    max-width: 200px;
-}
+      .preloader-wrapper p span {
+        display: inline-block;
+        height: 10px;
+        background: #3aaae5;
+        width: 100%;
+        max-width: 200px;
+      }
 
-.preloader-wrapper h5 {
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 60px;
-}
-body:not(.loaded) .main-wrapper{
-  display: none !important;
-}
-body.loaded #prelaoder{
-  display: none !important;
-}
+      .preloader-wrapper h5 {
+        /* text-transform: uppercase; */
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 60px;
+      }
+      body:not(.loaded) .main-wrapper {
+        display: none !important;
+      }
+      body.loaded #prelaoder {
+        display: none !important;
+      }
     </style>
   </head>
 
   <body class="text-light">
     <div id="prelaoder" class="text-end">
       <div class="preloader-wrapper">
-      <h2>DRYiCE iAutomate</h2>
-      <h4>DRYiCE iAutomate provides Intelligent Runbook</h4>
-      <p class=""><span></span></p>
-      <h5>Product Tour</h5>
-      <button onclick="loaded()" class="btn btn-primary">Start</button></div>
+        <h2>DRYiCE iAutomate</h2>
+        <h4>DRYiCE iAutomate provides Intelligent Runbook</h4>
+        <p class=""><span></span></p>
+        <h5>Product Tour</h5>
+        <button onclick="loaded()" class="btn btn-primary">Start</button>
+      </div>
     </div>
-    <div style="height: 100%" class="main-wrapper d-flex flex-column position-relative">
-      <div class="use-case-wrapper visually-hidden use-case-modal position-absolute d-flex justify-content-evenly align-items-center rounded">
+    <div
+      style="height: 100%"
+      class="main-wrapper d-flex flex-column position-relative"
+    >
+      <div
+        class="use-case-wrapper visually-hidden use-case-modal position-absolute d-flex justify-content-evenly align-items-center rounded"
+      >
         <div class="use-case">
-          <img src="assets/images/DRYiCE iAutomate-Black.png" alt="" width="100">
+          <img
+            src="assets/images/DRYiCE iAutomate-Black.png"
+            alt=""
+            width="100"
+          />
           <p>Auto Execution View</p>
 
           <div class="btn-wrapper justify-content-center">
@@ -245,7 +262,11 @@ body.loaded #prelaoder{
           </div>
         </div>
         <div class="use-case">
-          <img src="assets/images/DRYiCE iAutomate-Black.png" alt="" width="100">
+          <img
+            src="assets/images/DRYiCE iAutomate-Black.png"
+            alt=""
+            width="100"
+          />
           <p>Actionable Tickets New</p>
 
           <div class="btn-wrapper justify-content-center">
@@ -253,30 +274,38 @@ body.loaded #prelaoder{
           </div>
         </div>
       </div>
-      <div class="darkspace d-flex justify-content-center d-flex flex-grow-1 align-items-center">
+      <div
+        class="darkspace d-flex justify-content-center d-flex flex-grow-1 align-items-center"
+      >
         <div class="m-2 p-2">
           <h1>
-            <img src="assets/images/DRYiCE iAutomate-white.png" alt="logo" width="356" height="110">
+            <img
+              src="assets/images/DRYiCE iAutomate-white.png"
+              alt="logo"
+              width="356"
+              height="110"
+            />
           </h1>
           <h2 class="h1 mt-5">
-            DRYiCE iAutomate provides <br> Intelligent Runbook
+            DRYiCE iAutomate provides <br />
+            Intelligent Runbook
           </h2>
           <p class="header mt-3 lh-sm">
-            DRYiCE iAutomate provides Intelligent Runbook<br>
-            Automation capabilities for automating<br>
+            DRYiCE iAutomate provides Intelligent Runbook<br />
+            Automation capabilities for automating<br />
             the IT Operations resolution lifecycle
           </p>
           <div class="d-flex gap-4">
-            <button class="btn1 my-5" onclick="toggle()">
-              EXPERIENCE iAUTOMATE
+            <button class="btn1 my-5 rounded-pill" onclick="toggle()">
+              Experience iAutomate
             </button>
             <!-- <button class="btn2 my-5">Video Tutorial</button> -->
           </div>
         </div>
         <div class="m-2 p-2">
-           <div class="image_wrapper">
-            <img src="assets/images/iautomate_home.jpg" alt="iautomate_home">
-           </div>
+          <div class="image_wrapper">
+            <img src="assets/images/iautomate_home.jpg" alt="iautomate_home" />
+          </div>
         </div>
       </div>
       <footer class="flex text-center bottom-0 m-4">
@@ -284,7 +313,7 @@ body.loaded #prelaoder{
       </footer>
     </div>
     <script>
-      function loaded(){
+      function loaded() {
         let body = document.getElementsByTagName("body")[0];
         body.classList.add("loaded");
       }
@@ -313,51 +342,53 @@ body.loaded #prelaoder{
       }
 
       function getAllUrlParams(url) {
-        var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+        var queryString = url
+          ? url.split("?")[1]
+          : window.location.search.slice(1);
         var obj = {};
 
         if (queryString) {
-            queryString = queryString.split('#')[0];
-            var arr = queryString.split('&');
+          queryString = queryString.split("#")[0];
+          var arr = queryString.split("&");
 
-            for (var i = 0; i < arr.length; i++) {
-            var a = arr[i].split('=');
+          for (var i = 0; i < arr.length; i++) {
+            var a = arr[i].split("=");
             var paramName = a[0];
-            var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+            var paramValue = typeof a[1] === "undefined" ? true : a[1];
 
             paramName = paramName.toLowerCase();
-            if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+            if (typeof paramValue === "string")
+              paramValue = paramValue.toLowerCase();
 
             if (paramName.match(/\[(\d+)?\]$/)) {
-                var key = paramName.replace(/\[(\d+)?\]/, '');
-                if (!obj[key]) obj[key] = [];
+              var key = paramName.replace(/\[(\d+)?\]/, "");
+              if (!obj[key]) obj[key] = [];
 
-                if (paramName.match(/\[\d+\]$/)) {
+              if (paramName.match(/\[\d+\]$/)) {
                 var index = /\[(\d+)\]/.exec(paramName)[1];
                 obj[key][index] = paramValue;
-                } else {
+              } else {
                 obj[key].push(paramValue);
-                }
+              }
             } else {
-                if (!obj[paramName]) {
+              if (!obj[paramName]) {
                 obj[paramName] = paramValue;
-                } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+              } else if (obj[paramName] && typeof obj[paramName] === "string") {
                 obj[paramName] = [obj[paramName]];
                 obj[paramName].push(paramValue);
-                } else {
+              } else {
                 obj[paramName].push(paramValue);
-                }
+              }
             }
-            }
+          }
         }
 
         return obj;
       }
-      if(getAllUrlParams(window.location.href)['selection'] == true){
+      if (getAllUrlParams(window.location.href)["selection"] == true) {
         loaded();
         toggle();
       }
     </script>
-  
-
-</body></html>
+  </body>
+</html>

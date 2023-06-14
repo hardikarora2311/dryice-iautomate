@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="">
+<html>
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/shepherd.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
-<body class="main-dashboard body-flex" style="">
+<body class="main-dashboard body-flex">
     <div class="all-wrapper">
         <div class="top-bar-main d-flex justify-content-between" style="padding: 0 40px ;background:#0077b5;color: #fff;">
             <img src="assets/images/DRYiCE iAutomate-white.png" style="padding: 6px 0; object-fit: contain; width: auto;" width="140" height="45">
@@ -921,6 +923,8 @@ var logtimeout = "";
                         $('#second-step .option-main').on('click', function(e){
                             e.preventDefault();e.stopPropagation();
                             $(this).closest('#second-step').removeClass('active');
+                            $("#second-step .select-name").html("Incident Management")
+
                             tour.next();
                         });
                     }
@@ -984,7 +988,7 @@ var logtimeout = "";
                 classes: 'tour',
                 buttons: [
                     {
-                    text: 'Next',
+                    text: '',
                     action: tour.next
                     }
                 ], 
@@ -1019,8 +1023,9 @@ var logtimeout = "";
                 highlightClass: 'highlight-layer', 
                 classes: 'tour',
                 buttons: [
+                    
                     {
-                    text: 'Next',
+                    text: '',
                     action: ()=>{$('.guide-popup').hide();tour.next();}
                     }
                 ], 
@@ -1056,7 +1061,7 @@ var logtimeout = "";
                 classes: 'related-popup-step',
                 buttons: [
                     {
-                    text: 'Next',
+                    text: '',
                     action: ()=>{$('.related-popup').hide();tour.next();}
                     }
                 ], 
@@ -1092,7 +1097,7 @@ var logtimeout = "";
                 classes: 'tour',
                 buttons: [
                     {
-                    text: 'Next',
+                    text: '',
                     action: tour.next
                     }
                 ], 
@@ -1109,7 +1114,12 @@ var logtimeout = "";
                 classes: 'tour',
                 buttons: [
                     {
-                    text: 'Next',
+                        text: '',
+                        classes: 'previous',
+                        action: tour.back
+                    },
+                    {
+                    text: '',
                     action: tour.next
                     }
                 ], 
@@ -1185,7 +1195,7 @@ var logtimeout = "";
                 classes: 'log-table-2',
                 buttons: [
                     {
-                    text: 'Finish',
+                    text: '',
                     action: ()=>{$('.all-wrapper').hide();$('.thank-you').show();tour.complete();}
                     }
                 ], 
