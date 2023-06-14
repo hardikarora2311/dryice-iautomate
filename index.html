@@ -61,7 +61,7 @@
         line-height: 1;
         margin-bottom: 30px;
       }
-      
+
       .preloader-wrapper button.btn.btn-primary:hover {
         background-color: rgba(162, 216, 238, 0.5) !important;
       }
@@ -101,10 +101,6 @@
         transition: all 0.3s ease;
         text-align: center;
       }
-      .use-case-wrapper .use-case img {
-        width: 150px;
-        margin-bottom: 10px;
-      }
       .use-case-wrapper .use-case a {
         background: #0077b5;
         color: #fff;
@@ -121,10 +117,34 @@
       .use-case a:hover {
         color: white;
       }
-      .use-case p {
+      .use-case h2 {
+        font-size: 1.6em;
+        font-weight: 500;
+        margin-top: 0.8em;
         margin-bottom: 0.8em;
       }
-
+      .use-case p {
+        margin-bottom: 1em;
+      }
+      .use-case .img {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(
+          to right,
+          #3288f4 40%,
+          #2dd1b4 80%,
+          #9bf2e9
+        ) !important;
+      }
+      .use-case img {
+        width: 30px;
+        height: 30px;
+      }
       .btn-wrapper {
         display: flex;
         flex-direction: row;
@@ -250,24 +270,27 @@
         class="use-case-wrapper visually-hidden use-case-modal position-absolute d-flex justify-content-evenly align-items-center rounded"
       >
         <div class="use-case">
-          <img
-            src="assets/images/DRYiCE iAutomate-Black.png"
-            alt=""
-            width="100"
-          />
-          <p>Auto Execution View</p>
+          <div class="img">
+            <img src="assets/images/provisioning.png" alt="" />
+          </div>
+          <h2>Automatic Execution</h2>
+          <p>
+            Let's explore the automatic end-to-end Execution capability of
+            iAutomate.
+          </p>
 
           <div class="btn-wrapper justify-content-center">
             <a href="1.html" class="usecase-btn">Click through</a>
           </div>
         </div>
         <div class="use-case">
-          <img
-            src="assets/images/DRYiCE iAutomate-Black.png"
-            alt=""
-            width="100"
-          />
-          <p>Actionable Tickets New</p>
+          <div class="img">
+            <img src="assets/images/managing.png" alt="" />
+          </div>
+          <h2>Manual Runbook Execution</h2>
+          <p>
+            Take a look at how users can manually select and initiate runbooks.
+          </p>
 
           <div class="btn-wrapper justify-content-center">
             <a href="2.html" class="usecase-btn">Click through</a>
