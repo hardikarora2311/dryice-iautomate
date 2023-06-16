@@ -41,8 +41,8 @@
                 <img src="assets/images/my-account.PNG" class="me-1">
                 <p class="m-0">Tickets</p>
                 <div class="sub-menu" id="third-step">
-                    <a href="1.html" class="m-0 d-block option-main">Auto Execution View</a>
-                    <a href="2.html" class="m-0 d-block">Actionable Tickets New</a>
+                    <a href="1.html" class="m-0 d-block option-main" id="disabled">Auto Execution View</a>
+                    <a href="2.html" class="m-0 d-block" id="step3">Actionable Tickets New</a>
                 </div>
             </li>
             <li class="me-2">
@@ -141,12 +141,14 @@
         arrow: false,
         text: "For manual ticket execution, hover over the ‘Tickets’ menu and click on the ‘Actionable Tickets View’ option.",
         attachTo: {
-            element: '#third-step',
+            element: '#step3',
             on: 'right',
         },
         when: {
         show: () => {
                 $('.third-step').addClass('active');
+                $('#third-step').css('z-index', "99");
+                $( "#disabled" ).removeAttr( 'href' );
             }
         },
        
