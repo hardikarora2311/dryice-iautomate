@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html  style="overflow: hidden; height:100vh">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dryice | IAutomate</title>
+    <link rel="icon" href="assets/images/iautomate.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="main-dashboard body-flex" style="overflow: hidden; height:100vh">
+    <div class="darkscale"></div>
+
+    <div class="top-bar-main d-flex justify-content-between" style="padding: 0 40px ;background:#0077b5;color: #fff;">
+        <img src="assets/images/logo.PNG" style="padding: 2px 0;">
+        <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+            <img src="assets/images/top-bar-cta.PNG">
+        </div>
+    </div>
+    <div class="menu-bar" style="background-color:#dcdddd;padding: 0px 40px;color: #0070ab;">
+        <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Enviroment</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Run Books</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Knowledge</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Analysis</p>
+            </li>
+            <li class="me-2 third-step">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Tickets</p>
+                <div class="sub-menu" id="third-step">
+                    <a href="1.html" class="m-0 d-block option-main">Auto Execution View</a>
+                    <a href="2.html" class="m-0 d-block">Actionable Tickets New</a>
+                </div>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Ticket Logs</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Dashboard</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">Help</p>
+            </li>
+        </ul>
+    </div>
+    <div class="home-empty-step" id="second-step"></div>
+
+    <div class="container-type" style="padding: 0 25px;">
+        <img src="assets/images/home-banner.jpg" alt="home-banner" style="margin-top:1.5rem;max-width: 100%;width:100%;height:auto;max-height: 440px;object-fit: cover;">
+    </div>
+    <div class="copyright" style="background-color:#0077b5;padding: 10px 40px;color: #fff;">
+        <p class="mb-0">Copyright © 2013, 2022 HCL Technologies Limited</p>
+    </div>
+    <!-- <div class="home-empty-step" id="first-step">
+        <button class="btn btn-pill-primary highlight-layer">Let’s Begin</button>
+    </div> -->
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+   
+    const tour = new Shepherd.Tour({
+    // useModalOverlay: true,
+    defaultStepOptions: {
+      classes: 'shadow-md bg-purple-dark',
+      scrollTo: false
+    }
+  });
+  var thirdStep = 'right';
+
+  if($(window).width() < 991){
+    thirdStep = 'bottom';
+  }
+  tour.addSteps([
+    {
+        arrow: false,
+        text: "This is the Homepage of iAutomate.",
+        // attachTo: {
+        //     element: '#first-step',
+        // on: 'top-start',
+        // },
+        classes: 'example-step-extra-class',
+        buttons: [ 
+            {
+            text: '',
+            action: tour.next
+            }
+        ],
+        when: {
+            show: () => {
+              $(".darkscale").css("display", "none");
+            },
+          },
+        highlightClass: 'highlight-layer',
+        modalOverlayOpeningPadding: 0
+    },
+    {
+        arrow: false,
+        text: "Lets explore the End-to-End Execution on iAutomate.",
+        attachTo: {
+        //     element:'#second-step',
+        // on: 'bottom',
+        },
+        classes: 'tour',
+        buttons: [
+            {
+            text: '',
+            classes: 'previous',
+            action: tour.back
+            },
+            {
+            text: '',
+            action: tour.next
+            }
+        ], 
+        when: {
+            show: () => {
+              $(".darkscale").css("display", "block");
+            },
+          },
+
+        modalOverlayOpeningPadding: 2
+    },
+    {
+        arrow: false,
+        text: "Hover over the ‘Tickets’ menu and click on the ‘Auto Execution View’ option.",
+        attachTo: {
+            element: '#third-step',
+            on: 'right',
+        },
+        when: {
+        show: () => {
+                $('.third-step').addClass('active');
+            }
+        },
+       
+        highlightClass: 'highlight-layer',
+        classes: 'example-step-extra-class',
+        modalOverlayOpeningPadding: 3
+    }
+  ]);
+tour.start();
+
+</script>
+</body>
+</html>

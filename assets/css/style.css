@@ -2782,3 +2782,14 @@ table.my-ticket-table.finish tbody tr:first-child td:not(:empty):after {
   .previous.shepherd-button:before {
   display: none;
 }
+
+
+.darkscale {
+  /* background: black; */
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+}
